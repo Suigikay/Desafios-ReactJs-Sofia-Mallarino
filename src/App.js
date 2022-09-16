@@ -1,12 +1,13 @@
-import './App.css';
+import "./App.css";
 import Navbar from "./components/navBar/Navbar";
+import ItemListContainer from "./components/Productos/ItemListContainer";
 
 
 function App() {
   return (
-    <div className="Navbar">
-      <img src="/assets/logo.png" alt="logo" className="logo"/>
+    <div>
       <Navbar />
+    <ItemListContainer />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./Card";
+import ItemCount from "../Counter/ItemCount";
 
 function ItemListContainer() {
     return (
@@ -24,7 +25,13 @@ function ItemListContainer() {
                     title="Leche y Loción Desmaquillante Fundente"
                     detail="Desmaquillante que, en un solo gesto, limpia y tonifica la piel."
                     img="https://www.germainedecapuccini.es/media/catalog/product/cache/826fcfeec7c79daa0a2e1a3dd76f41c1/4/6/460028_Royal_Jelly_Desmaquillante_01_5638.jpg"
+
                 />
+            </div>
+            <div className="ItemCount">
+                <ItemCount initial={1} stock={3} />
+                <ItemCount initial={1} stock={5} />
+                <ItemCount initial={1} stock={2} />
             </div>
         </div>
     );

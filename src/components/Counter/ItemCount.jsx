@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import "./ItemCount.css";
+import "../Productos/Item.css";
 
 
 function ItemCount({ initial, stock }) {
@@ -23,7 +23,9 @@ function ItemCount({ initial, stock }) {
 
 
     return (
-        <div>
+
+
+        <div className='ItemCount'>
             <button onClick={handleSubstrack}>-</button>
             <span>{count}</span>
             <button onClick={handleAdd}>+</button>

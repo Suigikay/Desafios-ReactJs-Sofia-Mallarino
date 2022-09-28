@@ -1,0 +1,29 @@
+* {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+h1 {
+    display: flex;
+    display: inline-flex;
+    align-items: flex-start;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+.itemDetail {
+    border: 2px solid #ccc;
+    display: inline-flex;
+    margin: 3rem;
+    padding: 3rem;
+}
+
+
+.itemDetail img {
+    width: 30%;
+    margin-right: 3rem;
+
+}

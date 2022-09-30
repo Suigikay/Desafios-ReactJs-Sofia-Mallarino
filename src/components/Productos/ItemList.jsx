@@ -8,6 +8,7 @@ function ItemList(props) {
                 return (
                     <Card
                         key={item.id}
+                        id={item.id}
                         price={item.price}
                         title={item.title}
                         img={item.img}

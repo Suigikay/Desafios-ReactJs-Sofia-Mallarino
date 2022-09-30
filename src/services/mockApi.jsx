@@ -64,10 +64,29 @@ export default function getItems() {
     });
 }
 
-export function getSingleItems() {
+export function getItemsByCategory(cat) {
     return new Promise((resolve, reject) => {
+
+        let itemFind = data.filter((item) => {
+            return item.category === cat;
+        });
         setTimeout(() => {
-            resolve(data[0]);
+            if (itemFind) resolve(itemFind);
+            else reject(new Error("No encontramos el Item"));
+        }, 2000);
+    });
+}
+
+
+
+export function getSingleItems(idItem) {
+    return new Promise((resolve, reject) => {
+        let itemFind = data.find((item) => {
+            return item.id === parseInt(idItem);
+        });
+        setTimeout(() => {
+            if (itemFind) resolve(itemFind);
+            else reject(new Error("No encontramos el Item"));
         }, 2000);
     });
 }

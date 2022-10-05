@@ -17,10 +17,6 @@ function ItemCount({ stock, onAddToCart }) {
         }
     }
 
-    // function onAdd() {
-    //     alert(`Se agregaron ${count} items al carrito`)
-    // }
-
 
     return (
 

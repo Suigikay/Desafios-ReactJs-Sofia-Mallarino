@@ -10,8 +10,9 @@ function ItemDetail(props) {
 
     const [cartState, setCartState] = useState(false);
     const handleAddToCart = (count) => {
-        alert(`agregaste al carrito ${count} productos`)
-    }; setCartState(true)
+        alert(`agregaste al carrito ${count} productos`);
+        setCartState(true)
+    };
 
 
     return (

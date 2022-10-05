@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import "../Productos/Item.css";
 
 
-function ItemCount({ initial, stock }) {
-    const [count, setCount] = useState(initial);
+function ItemCount({ stock, onAddToCart }) {
+    const [count, setCount] = useState(1);
 
     function handleSubstrack() {
         if (count > 1) {
@@ -17,9 +17,9 @@ function ItemCount({ initial, stock }) {
         }
     }
 
-    function onAdd() {
-        alert(`Se agregaron ${count} items al carrito`)
-    }
+    // function onAdd() {
+    //     alert(`Se agregaron ${count} items al carrito`)
+    // }
 
 
     return (
@@ -30,7 +30,7 @@ function ItemCount({ initial, stock }) {
             <span>{count}</span>
             <button onClick={handleAdd}>+</button>
             <div>
-                <button id='addToCartBtn' onClick={onAdd}>Agregar al carrito</button>
+                <button id='addToCartBtn' onClick={() => onAddToCart(count)}>Agregar al carrito</button>
             </div>
         </div>
     )

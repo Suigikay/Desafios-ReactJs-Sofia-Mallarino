@@ -1,7 +1,15 @@
+import React, { useContext } from "react";
+import { cartCtx } from "../../context/cartContext";
+
 
 function CartWidget() {
+    const { getTotalItemsInCart } = useContext(cartCtx);
+
     return (
-        <img src="/assets/shoppingCart.png" alt="carrito" class="shoppingCart" />
+        <div>
+            <img src="/assets/shoppingCart.png" alt="carrito" class="shoppingCart" />
+            <span>{getTotalItemsInCart()}</span>
+        </div>
     );
 }
 

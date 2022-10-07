@@ -6,13 +6,15 @@ import ItemDetail from "./components/ItemDetailContainer/ItemDetail";
 
 
 import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
+import CartContextProvider from "./context/cartContext";
 
 
 function App() {
   return (
-    
+
+      <CartContextProvider>
     <BrowserRouter>
-      <Navbar />
+       <Navbar />
       <Routes>
         <Route path="/" element={
         <ItemListContainer /> 
@@ -23,6 +25,7 @@ function App() {
       </Routes>
       <Link to="/">Página principal</Link>
       </BrowserRouter>
+      </CartContextProvider>
     
   );
 }

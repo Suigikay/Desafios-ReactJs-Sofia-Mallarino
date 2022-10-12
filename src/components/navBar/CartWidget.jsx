@@ -8,7 +8,7 @@ function CartWidget() {
     return (
         <div>
             <img src="/assets/shoppingCart.png" alt="carrito" class="shoppingCart" />
-            <span>{getTotalItemsInCart()}</span>
+            <span>{getTotalItemsInCart() > 0 && getTotalItemsInCart()}</span>
         </div>
     );
 }

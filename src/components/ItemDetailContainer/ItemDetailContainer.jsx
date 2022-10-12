@@ -8,6 +8,7 @@ import './ItemDetail.css';
 
 function ItemDetailContainer() {
     let [data, setData] = useState({});
+    const [error, setError] = useState(false);
 
     const { id } = useParams();
 
@@ -15,10 +16,28 @@ function ItemDetailContainer() {
 
     useEffect(
         () => {
-            getSingleItems(id).then((respuestaDatos) => setData(respuestaDatos));
-        },
-        [id]
+            getSingleItems(id)
+                .then((respuestaDatos) => setData(respuestaDatos))
+                .catch((errormsg) => {
+                    setError(errormsg.message)
+                });
+        }, [id]
     );
+
+    if (!data.title) {
+        return (
+            <>
+                {error ? (
+                    <div>
+                        <h2 style={{ color: "#aa0033" }}> Error: obteniendo los datos</h2>
+                        <p>{error}</p>
+                    </div>
+                ) : (
+                    <h3>Cargando ... :)</h3>
+                )}
+            </>
+        );
+    }
 
     return (
         <div >

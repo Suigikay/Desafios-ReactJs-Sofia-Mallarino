@@ -2,25 +2,35 @@ import React, { useState, useEffect } from "react";
 import getItems, { getItemsByCategory } from "../../services/mockApi";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
+
 function ItemListContainer() {
-    let [data, setData] = useState([]);
+    const [data, setData] = useState([]);
+    const [isLoading, setisLoading] = useState(true)
 
     const { cat } = useParams();
 
     useEffect(() => {
+        setData([]);
+        setisLoading(true);
         if (cat === undefined) {
-            getItems().then((respuestaDatos) => setData(respuestaDatos));
+            getItems().then((respuestaDatos) => setData(respuestaDatos))
+                .finally(() => setisLoading(false));;
         }
         else {
-            getItemsByCategory(cat).then((respuestaDatos) => setData(respuestaDatos));
-
+            getItemsByCategory(cat)
+                .then((respuestaDatos) => setData(respuestaDatos))
+                .finally(() => setisLoading(false))
         }
     }, [cat]);
 
 
     return (
-
         <div>
+            <div>
+                {
+                    isLoading && <h3>Cargando ...:D</h3>
+                }
+            </div>
             <div className="products">
                 <ItemList data={data} />
             </div>

@@ -25,6 +25,9 @@ function ItemDetail(item) {
                 <h1>{title}</h1>
                 <h2>{detail}</h2>
                 <h3>$ {price}</h3>
+                {item.stock === 0 && (
+                    <span style={{ color: "#aa0033" }}>Producto sin stock!</span>
+                )}
                 {cartState === false ? <ItemCount stock={stock} onAddToCart={handleAddToCart} /> : <button > <Link to="/cart">Finalizar Compra!</Link></button>}
 
 

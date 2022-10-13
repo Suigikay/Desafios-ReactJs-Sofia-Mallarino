@@ -26,7 +26,7 @@ export default function CartContextProvider({ children }) {
     }
 
     function getTotalItemsInCart() {
-        let total = 5
+        let total = 0
         cart.forEach(item => 0)
         return total;
     }
@@ -42,6 +42,14 @@ export default function CartContextProvider({ children }) {
         return found;
     }
 
+    const emptyCart = () => {
+        return setCart([])
+    }
+
+    const deleteItem = (id) => {
+        return setCart(cart.filter(item => item.id !== id))
+    }
+
 
     return (
         //3 - Pasamos al provider el "value" para los componentes que consuman el context
@@ -51,6 +59,8 @@ export default function CartContextProvider({ children }) {
             getTotalItemsInCart,
             isInCart,
             getTotalPriceInCart,
+            emptyCart,
+            deleteItem
         }}
         >
             {children}

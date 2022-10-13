@@ -6,7 +6,7 @@ import "./cart.css";
 
 function CartView() {
     const context = useContext(cartCtx)
-    const { cart, cleartCart, removeFromCart, getTotalPriceInCart } = context
+    const { cart, deleteItem, emptyCart, getTotalPriceInCart } = context
 
     let carritoVacio = cart.length === 0;
 
@@ -17,6 +17,8 @@ function CartView() {
     return (
         <>
             <h1>Tu Carrito</h1>
+            <Button onClick={emptyCart}>Borrar todo</Button>
+
             <table className="cartList">
                 <thead className="cartList_head">
                     <tr className="cartList_row">
@@ -26,6 +28,7 @@ function CartView() {
                         <th>Cantidad</th>
                         <th>Quitar</th>
                         <th>Total</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -39,7 +42,7 @@ function CartView() {
                                 <td>$ {item.price}</td>
                                 <td>{item.count}</td>
                                 <td>
-                                    <Button onClick={item.removeItem}>X</Button>
+                                    <Button onClick={deleteItem}>X</Button>
                                 </td>
                                 <th>$ {item.price * item.count}</th>
                             </tr>

@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
-import getItems, { getItemsByCategory } from "../../services/mockApi";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
+
+import { getItems, getItemsByCategory } from "../../services/firestore";
+
 
 function ItemListContainer() {
     const [data, setData] = useState([]);

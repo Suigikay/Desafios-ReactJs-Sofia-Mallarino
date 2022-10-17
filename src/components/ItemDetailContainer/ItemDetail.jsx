@@ -7,14 +7,15 @@ import { cartCtx } from "../../context/cartContext"
 
 function ItemDetail(item) {
     let { title, detail, price, img, stock } = item;
+    const [isInCart, setIsInCart] = useState(false);
+    // const [cartState, setCartState] = useState(false);
 
     const { addItem } = useContext(cartCtx);
 
 
-    const [cartState, setCartState] = useState(false);
     const handleAddToCart = (count) => {
         addItem(item, count)
-        setCartState(true)
+        setIsInCart(true)
     };
 
 
@@ -28,9 +29,12 @@ function ItemDetail(item) {
                 {item.stock === 0 && (
                     <span style={{ color: "#aa0033" }}>Producto sin stock!</span>
                 )}
-                {cartState === false ? <ItemCount stock={stock} onAddToCart={handleAddToCart} /> : <button > <Link to="/cart">Finalizar Compra!</Link></button>}
-
-
+                {/* /* {cartState === false ? <ItemCount stock={stock} onAddToCart={handleAddToCart} /> : <button > <Link to="/cart">Finalizar Compra!</Link></button>} */}
+                {isInCart ? (
+                    <Link to="/cart">Ir al carrito</Link>
+                ) : (
+                    <ItemCount stock={stock} onAddToCart={handleAddToCart} />
+                )}
             </div>
 
         </div>

@@ -32,7 +32,7 @@ function App() {
       </BrowserRouter>
       </CartContextProvider>
     
-  );
+  )
 }
 
 export default App;

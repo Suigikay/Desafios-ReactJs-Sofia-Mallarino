@@ -5,6 +5,7 @@ import Button from "../Button/Button";
 import "./cart.css";
 import CheckoutForm from '../CheckoutForm/CheckoutForm';
 
+
 function CartView() {
     const context = useContext(cartCtx)
     const { cart, deleteItem, emptyCart, getTotalPriceInCart } = context
@@ -45,7 +46,7 @@ function CartView() {
                                 <td>$ {item.price}</td>
                                 <td>{item.count}</td>
                                 <td>
-                                    <Button onClick={deleteItem}>X</Button>
+                                    <Button onClick={() => deleteItem(item.id)}>Quitar</Button>
                                 </td>
                                 <th>$ {item.price * item.count}</th>
                             </tr>

@@ -1,15 +1,24 @@
 import React, { useContext } from "react";
 import { cartCtx } from "../../context/cartContext";
+import { FaShoppingBag } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
+
 
 
 function CartWidget() {
-    const { getTotalItemsInCart } = useContext(cartCtx);
+    const { getItemQty } = useContext(cartCtx);
 
     return (
-        <div>
-            <img src="/assets/shoppingCart.png" alt="carrito" class="shoppingCart" />
-            <span>{getTotalItemsInCart() > 0 && getTotalItemsInCart()}</span>
+        <div className="bagIconCount">
+            <Link to="/cart">
+                <h2><FaShoppingBag className="bagIcon" /></h2>
+                {/* <span>{getTotalItemsInCart() > 0 && getTotalItemsInCart()}</span> */}
+            </Link>
+            <span className="bagIconNumber" >{getItemQty()}</span>
+
         </div>
+
     );
 }
 

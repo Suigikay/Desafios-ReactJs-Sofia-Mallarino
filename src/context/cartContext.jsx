@@ -1,12 +1,12 @@
 import React, { useState, createContext } from "react";
 
-//1- Importamos e inicializamos nuestro CreateContext
 
-const cartCtx = createContext({});
+const cartCtx = createContext();
 
-//2- Definimos nuestro provider 
+
+
 export default function CartContextProvider({ children }) {
-    const [cart, setCart] = useState([])
+    const [cart, setCart] = useState([]);
 
     function addItem(item, count) {
         if (isInCart(item.id)) {
@@ -25,11 +25,15 @@ export default function CartContextProvider({ children }) {
         }
     }
 
-    function getTotalItemsInCart() {
-        let total = 0
-        cart.forEach(item => 0)
-        return total;
-    }
+    // function getTotalItemsInCart() {
+    //     let total = 0
+    //     cart.forEach((item) => 0)
+    //     return total;
+    // }
+
+    const getItemQty = () => {
+        return cart.reduce((acc, x) => (acc += x.qty), 0);
+    };
 
     function getTotalPriceInCart() {
         let total = 0;
@@ -46,17 +50,17 @@ export default function CartContextProvider({ children }) {
         return setCart([])
     }
 
+
     const deleteItem = (id) => {
         return setCart(cart.filter(item => item.id !== id))
     }
 
 
     return (
-        //3 - Pasamos al provider el "value" para los componentes que consuman el context
         <cartCtx.Provider value={{
             cart,
             addItem,
-            getTotalItemsInCart,
+            getItemQty,
             isInCart,
             getTotalPriceInCart,
             emptyCart,
@@ -68,4 +72,4 @@ export default function CartContextProvider({ children }) {
     );
 }
 
-export { cartCtx }
+export { cartCtx };

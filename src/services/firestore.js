@@ -75,7 +75,7 @@ export async function exportDataToFireStore(){
         price: 2800,
         detail: "Desmaquillante que, en un solo gesto, limpia y tonifica la piel.",
         img: "/assets/Desmaquillante.jpg",
-        stock: 5,
+        stock: 20,
         category: "limpieza",
     },
     {
@@ -84,7 +84,7 @@ export async function exportDataToFireStore(){
         price: 3500,
         detail: "La solución definitiva para las pieles que no logran hacer desaparecer las imperfecciones y granitos del rostro.",
         img: "/assets/Serum.jpg",
-        stock: 2,
+        stock: 20,
         category: "tratamientos",
     },
     {
@@ -93,7 +93,7 @@ export async function exportDataToFireStore(){
         price: 1950,
         detail: "Tratamiento intensivo diario que regenera, nutre y reconforta la piel del labio y su contorno recobrando un aspecto carnoso y juvenil gracias a su “efecto volumen.",
         img: "/assets/Corrector labios.jpg",
-        stock: 10,
+        stock: 15,
         category: "cuidados",
     },
     {

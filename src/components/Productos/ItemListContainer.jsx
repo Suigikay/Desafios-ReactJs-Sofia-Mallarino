@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
+import ClipLoader from "react-spinners/ClipLoader";
+import '../ItemDetailContainer/ItemDetail.css';
 
 import { getItems, getItemsByCategory } from "../../services/firestore";
 
@@ -30,7 +32,17 @@ function ItemListContainer() {
         <div>
             <div>
                 {
-                    isLoading && <h3>Cargando ...:D</h3>
+                    isLoading
+                    &&
+                    <div className='loader'>
+                        <ClipLoader
+                            color={"#ac53ac"}
+                            loading={data}
+                            size={60}
+                            aria-label="Loading Spinner"
+                            data-testid="loader"
+                        />
+                    </div>
                 }
             </div>
             <div className="products">

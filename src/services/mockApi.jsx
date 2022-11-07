@@ -32,7 +32,7 @@ const data = [
         price: 1950,
         detail: "Tratamiento intensivo diario que regenera, nutre y reconforta la piel del labio y su contorno recobrando un aspecto carnoso y juvenil gracias a su “efecto volumen.",
         img: "/assets/Corrector labios.jpg",
-        stock: 10,
+        stock: 5,
         category: "cuidados",
     },
     {

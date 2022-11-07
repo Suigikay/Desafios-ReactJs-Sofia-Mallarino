@@ -19,12 +19,14 @@ function Card(prop) {
                 <div className="card-detail">
                     <h3>{title}</h3>
                     <p>{detail}</p>
-                    <h4>$ {price}</h4>
-                    <Link to={urlDetalle}>
-                        <button>
-                            Ver más
-                        </button>
-                    </Link>
+                    <div className="itemInline">
+                        <h4>$ {price}</h4>
+                        <Link to={urlDetalle}>
+                            <button className="btnPink" >
+                                Ver más
+                            </button>
+                        </Link>
+                    </div>
                 </div>
             </div>
 

@@ -4,6 +4,8 @@ import { cartCtx } from "../../context/cartContext"
 import Button from "../Button/Button";
 import "./cart.css";
 import CheckoutForm from '../CheckoutForm/CheckoutForm';
+import { Link } from "react-router-dom";
+
 
 
 function CartView() {
@@ -20,8 +22,11 @@ function CartView() {
 
     return (
         <>
-            <h1>Tu Carrito</h1>
-            <Button onClick={emptyCart}>Borrar todo</Button>
+            <div>
+                <h1 className='title'>Tu Carrito</h1>
+                <Button onClick={emptyCart} className="title">Borrar todo</Button>
+            </div>
+
 
             <table className="cartList">
                 <thead className="cartList_head">
@@ -54,7 +59,11 @@ function CartView() {
                     })}
                 </tbody>
             </table>
+
             <h3>El total de tu compra es de $ {getTotalPriceInCart()}</h3>
+            <Link to="/" className='btnWhite'>Seguir comprando</Link>
+
+
             <CheckoutForm />
 
         </>

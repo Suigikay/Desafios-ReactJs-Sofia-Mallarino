@@ -5,7 +5,7 @@ const data = [
         price: 7050,
         detail: "Tres fórmulas complementarias para una cura de 30 días que resta años a tu piel.",
         img: "/assets/Tratamiento age cure.jpg",
-        stock: 0,
+        stock: 5,
         category: "tratamientos",
     },
     {

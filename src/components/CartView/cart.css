@@ -6,10 +6,20 @@
 }
 
 .cartList_head {
-    background-color: #cc7888;
+    background-color: rgb(194, 112, 183);
     margin: 8px auto;
 }
 
 .cartList_row {
     line-height: 46px;
+}
+
+.title {
+    display: inline-flex;
+    text-align: center;
+    font-weight: 400;
+}
+
+.alignEnd {
+    align-self: flex-end;
 }

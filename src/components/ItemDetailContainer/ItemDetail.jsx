@@ -26,12 +26,17 @@ function ItemDetail(item) {
                 <h1>{title}</h1>
                 <h2>{detail}</h2>
                 <h3>$ {price}</h3>
+                <h5>Cantidad disponible: {stock}</h5>
                 {item.stock === 0 && (
                     <span style={{ color: "#aa0033" }}>Producto sin stock!</span>
                 )}
-                {/* /* {cartState === false ? <ItemCount stock={stock} onAddToCart={handleAddToCart} /> : <button > <Link to="/cart">Finalizar Compra!</Link></button>} */}
                 {isInCart ? (
-                    <Link to="/cart">Ir al carrito</Link>
+                    <div>
+                        <Link to="/" className='btnWhite'>Seguir comprando</Link>
+
+                        <Link to="/cart" className='btnPink'>Continuar al carrito</Link>
+                    </div>
+
                 ) : (
                     <ItemCount stock={stock} onAddToCart={handleAddToCart} />
                 )}

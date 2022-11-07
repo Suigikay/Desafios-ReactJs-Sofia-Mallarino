@@ -16,7 +16,6 @@ function Navbar() {
                         <li> <Link to="/category/limpieza"> Limpieza</Link></li>
                         <li> <Link to="/category/cuidados"> Cuidados</Link></li>
                         <li> <Link to="/"> Inicio</Link></li>
-
                     </ul>
                 </h4>
                 <CartWidget />

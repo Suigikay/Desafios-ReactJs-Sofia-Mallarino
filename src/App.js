@@ -8,7 +8,7 @@ import Checkout from "./components/Checkout/Checkout";
 
 
 
-import {BrowserRouter, Routes, Route, Link} from "react-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 import CartContextProvider from "./context/cartContext";
 
 
@@ -27,8 +27,8 @@ function App() {
         <Route path="/producto/:id" element={<ItemDetailContainer /> } />
         <Route path="/cart" element={<CartView />  } />
         <Route path="/checkout/:orderid" element= {<Checkout/> } />
+        <Route path="*" element={<h1>Página no encontrada</h1>}/>
       </Routes>
-      <Link to="/">Página principal</Link>
       </BrowserRouter>
       </CartContextProvider>
     

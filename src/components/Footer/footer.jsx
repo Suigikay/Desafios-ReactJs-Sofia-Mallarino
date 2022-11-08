@@ -22,7 +22,7 @@ function footer() {
                             <h4>
                                 Encontranos
                             </h4>
-                            <p> 099 123 456</p>
+                            <p> 099 123 455</p>
                             <p> 099 456 123</p>
                             <p>chispa@mail.com</p>
                         </div>

@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs, doc, getDoc, query, where, addDoc } from "firebase/firestore"
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCHg8OdZapJr4zzqq474460WxWpsOu6jQ4",
   authDomain: "sibila-sofia-mallarino.firebaseapp.com",
@@ -11,7 +10,6 @@ const firebaseConfig = {
   appId: "1:37105786849:web:fc663e3cdf2a733dd43ca0"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const firestore = getFirestore(app)
 
@@ -113,7 +111,35 @@ export async function exportDataToFireStore(){
         img: "/assets/SPF.jpg",
         stock: 8,
         category: "cuidados",
+    },
+      {
+        id: 7,
+        title: "Sérum Tensor de Acción Inmediata",
+        price: 1000,
+        detail: "Tratamiento puntual de efecto lifting rápido que aporta a la piel la energía perdida.",
+        img: "/assets/Serum tensor.jpg",
+        stock: 15,
+        category: "tratamientos",
+    },
+      {
+        id: 8,
+        title: "Fluido Exfoliante Piel Normal y Mixta",
+        price: 1550,
+        detail: "Exfolia suavemente, purifica y mantiene la hidratación cutánea proporcionando un correcto equilibrio.",
+        img: "/assets/Exfoliante.jpg",
+        stock: 10,
+        category: "limpieza",
+    },
+    {
+        id: 9,
+        title: "Gel Limpiador Extra-Confort",
+        price: 1900,
+        detail: "Limpia profundamente la piel sin resecarla, otorgándole un confort duradero",
+        img: "/assets/Limpiador.jpg",
+        stock: 12,
+        category: "limpieza",
     }
+
 ];
 
   const collectionRef = collection(firestore, "productos");

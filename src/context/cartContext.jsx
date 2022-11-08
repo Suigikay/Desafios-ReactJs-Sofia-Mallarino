@@ -25,14 +25,9 @@ export default function CartContextProvider({ children }) {
         }
     }
 
-    // function getTotalItemsInCart() {
-    //     let total = 0
-    //     cart.forEach((item) => 0)
-    //     return total;
-    // }
 
     const getItemQty = () => {
-        return cart.reduce((acc, x) => (acc += x.qty), 0);
+        return cart.reduce((acc, x) => (acc += x.count), 0);
     };
 
     function getTotalPriceInCart() {

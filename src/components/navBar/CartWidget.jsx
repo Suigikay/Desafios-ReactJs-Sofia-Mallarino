@@ -13,7 +13,6 @@ function CartWidget() {
         <div className="bagIconCount">
             <Link to="/cart">
                 <h2><FaShoppingBag className="bagIcon" /></h2>
-                {/* <span>{getTotalItemsInCart() > 0 && getTotalItemsInCart()}</span> */}
             </Link>
             <span className="bagIconNumber" >{getItemQty()}</span>
 

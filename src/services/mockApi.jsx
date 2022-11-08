@@ -30,7 +30,7 @@ const data = [
         id: 4,
         title: "Corrector Labios y Contorno",
         price: 1950,
-        detail: "Tratamiento intensivo diario que regenera, nutre y reconforta la piel del labio y su contorno recobrando un aspecto carnoso y juvenil gracias a su “efecto volumen.",
+        detail: "Tratamiento intensivo diario que regenera, nutre y reconforta la piel del labio y su contorno.",
         img: "/assets/Corrector labios.jpg",
         stock: 5,
         category: "cuidados",
@@ -52,7 +52,35 @@ const data = [
         img: "/assets/SPF.jpg",
         stock: 8,
         category: "cuidados",
+    },
+    {
+        id: 7,
+        title: "Sérum Tensor de Acción Inmediata",
+        price: 1000,
+        detail: "Tratamiento puntual de efecto lifting rápido que aporta a la piel la energía perdida.",
+        img: "/assets/Serum tensor.jpg",
+        stock: 15,
+        category: "tratamientos",
+    },
+    {
+        id: 8,
+        title: "Fluido Exfoliante Piel Normal y Mixta",
+        price: 1550,
+        detail: "Exfolia suavemente, purifica y mantiene la hidratación cutánea proporcionando un correcto equilibrio.",
+        img: "/assets/Exfoliante.jpg",
+        stock: 10,
+        category: "limpieza",
+    },
+    {
+        id: 9,
+        title: "Gel Limpiador Extra-Confort",
+        price: 1900,
+        detail: "Limpia profundamente la piel sin resecarla, otorgándole un confort duradero",
+        img: "/assets/Limpiador.jpg",
+        stock: 12,
+        category: "limpieza",
     }
+
 ];
 
 

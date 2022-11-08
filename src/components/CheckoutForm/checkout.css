@@ -1,0 +1,75 @@
+input[type=text],
+input[type=email],
+input[type=tel],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.form-container {
+    width: 50%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-left: 25%;
+    margin-top: 2%;
+}
+
+.btnGreen {
+    background-color: rgb(112, 194, 123);
+    width: 10rem;
+    height: 3rem;
+    font-size: 0.8em;
+    font-weight: 700;
+    display: inline-block;
+    color: rgb(26, 21, 21);
+    text-decoration: none;
+    border: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    margin: 18px;
+    text-align: center;
+}
+
+.alignCenter {
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+
+.cartList {
+    border-spacing: 0;
+    width: 80%;
+    margin: 15px auto;
+    text-align: center;
+}
+
+.cartList_head {
+    background-color: rgb(194, 112, 183);
+    margin: 8px auto;
+}
+
+.cartList_row {
+    line-height: 46px;
+}
+
+.title {
+    display: inline-flex;
+    text-align: center;
+    font-weight: 400;
+}
+
+.alignEnd {
+    align-self: flex-end;
+}

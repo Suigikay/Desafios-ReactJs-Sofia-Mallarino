@@ -30,6 +30,8 @@ function ItemListContainer() {
 
     return (
         <div>
+            <h1 className="bigTitle">Top Productos</h1>
+
             <div>
                 {
                     isLoading
